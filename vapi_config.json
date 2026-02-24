@@ -1,0 +1,36 @@
+{
+  "name": "Client's Salon Receptionist",
+  
+  "model": {
+    "provider": "custom-llm",
+    "url": "https://your-server.com/chat/completions",
+    "model": "client-salon"
+  },
+  
+  "voice": {
+    "provider": "elevenlabs",
+    "voiceId": "21m00Tcm4TlvDq8ikWAM",
+    "stability": 0.5,
+    "similarityBoost": 0.75
+  },
+  
+  "transcriber": {
+    "provider": "deepgram",
+    "model": "nova-2",
+    "language": "en"
+  },
+  
+  "firstMessage": "Hi, thanks for calling Client's Hair Salon! This is our virtual assistant. How can I help you today?",
+  
+  "endCallMessage": "Thanks for calling Client's! Have a great day!",
+  
+  "serverMessages": [
+    "conversation-update",
+    "end-of-call-report", 
+    "function-call",
+    "tool-calls"
+  ],
+  
+  "silenceTimeoutSeconds": 30,
+  "maxDurationSeconds": 600
+}
